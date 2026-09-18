@@ -1,0 +1,660 @@
+/**
+ * Klinika CMS — professional admin UI
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
+
+.klinika-cms-wrap {
+  --cms-blue: #009BE3;
+  --cms-blue-dark: #007db8;
+  --cms-blue-soft: #ECF9FF;
+  --cms-ink: #0F172A;
+  --cms-text: #1E293B;
+  --cms-muted: #64748B;
+  --cms-line: #E2E8F0;
+  --cms-surface: #FFFFFF;
+  --cms-canvas: #F1F5F9;
+  --cms-radius: 14px;
+  --cms-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.04);
+  max-width: 1360px;
+  margin: 12px 20px 48px 2px;
+  padding: 0;
+  font-family: Manrope, "Segoe UI", sans-serif;
+  color: var(--cms-text);
+  background: transparent;
+}
+
+/* Override WP .wrap noise */
+.klinika-cms-wrap h1 {
+  font-family: Manrope, "Segoe UI", sans-serif;
+}
+
+.klinika-cms-wrap *,
+.klinika-cms-wrap *::before,
+.klinika-cms-wrap *::after {
+  box-sizing: border-box;
+}
+
+/* Top bar */
+.klinika-cms-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 0 0 22px;
+  padding: 20px 24px;
+  background: var(--cms-surface);
+  border: 1px solid var(--cms-line);
+  border-radius: 18px;
+  box-shadow: var(--cms-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.klinika-cms-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #009BE3 0%, #04AA29 100%);
+}
+
+.klinika-cms-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.klinika-cms-mark {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #009BE3 0%, #0077b3 100%);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.03em;
+  box-shadow: 0 8px 18px rgba(0, 155, 227, 0.28);
+}
+
+.klinika-cms-header h1 {
+  margin: 0 0 2px !important;
+  padding: 0 !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em;
+  color: var(--cms-ink) !important;
+  line-height: 1.15 !important;
+}
+
+.klinika-cms-header .description {
+  margin: 0 !important;
+  color: var(--cms-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.klinika-cms-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.klinika-cms-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--cms-blue-soft);
+  border: 1px solid #cfeaf7;
+  color: var(--cms-blue-dark);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.klinika-lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: #F8FAFC;
+  border: 1px solid var(--cms-line);
+  border-radius: 999px;
+  padding: 3px;
+}
+
+.klinika-lang-btn {
+  display: inline-flex;
+  min-width: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  text-decoration: none !important;
+  color: var(--cms-muted);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1;
+  transition: all 0.18s ease;
+}
+
+.klinika-lang-btn:hover {
+  color: var(--cms-blue);
+  background: #fff;
+}
+
+.klinika-lang-btn.is-active {
+  background: var(--cms-blue);
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(0, 155, 227, 0.3);
+}
+
+/* Layout */
+.klinika-cms-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+/* Sidebar */
+.klinika-cms-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  background: var(--cms-surface);
+  border: 1px solid var(--cms-line);
+  border-radius: 18px;
+  box-shadow: var(--cms-shadow);
+  position: sticky;
+  top: 48px;
+}
+
+.klinika-cms-nav-label {
+  margin: 4px 10px 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #94A3B8;
+}
+
+.klinika-cms-nav .button,
+.klinika-cms-nav button[data-tab] {
+  display: flex !important;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start !important;
+  gap: 10px;
+  margin: 0 !important;
+  padding: 12px 14px !important;
+  border: 0 !important;
+  border-radius: 11px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #334155 !important;
+  font-family: Manrope, "Segoe UI", sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 650 !important;
+  line-height: 1.25 !important;
+  text-align: left !important;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.klinika-cms-nav .button::before,
+.klinika-cms-nav button[data-tab]::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  flex-shrink: 0;
+}
+
+.klinika-cms-nav .button:hover,
+.klinika-cms-nav button[data-tab]:hover {
+  background: #F8FAFC !important;
+  color: var(--cms-ink) !important;
+}
+
+.klinika-cms-nav .button:hover::before,
+.klinika-cms-nav button[data-tab]:hover::before {
+  background: var(--cms-blue);
+}
+
+.klinika-cms-nav .button.button-primary,
+.klinika-cms-nav button[data-tab].is-active,
+.klinika-cms-nav button[data-tab].button-primary {
+  background: var(--cms-blue-soft) !important;
+  color: var(--cms-blue-dark) !important;
+  box-shadow: inset 0 0 0 1px #cfeaf7 !important;
+}
+
+.klinika-cms-nav .button.button-primary::before,
+.klinika-cms-nav button[data-tab].is-active::before,
+.klinika-cms-nav button[data-tab].button-primary::before {
+  background: var(--cms-blue);
+  box-shadow: 0 0 0 3px rgba(0, 155, 227, 0.18);
+}
+
+.klinika-cms-main {
+  min-width: 0;
+}
+
+#klinika-cms-notice {
+  margin: 0 0 16px !important;
+  border-radius: 12px !important;
+  border-left-width: 4px !important;
+  box-shadow: var(--cms-shadow);
+}
+
+#klinika-cms-notice p {
+  margin: 0.5em 0 !important;
+  font-weight: 600;
+}
+
+/* Cards */
+.klinika-cms-card {
+  background: var(--cms-surface);
+  border: 1px solid var(--cms-line);
+  border-radius: var(--cms-radius);
+  padding: 0;
+  margin: 0 0 18px;
+  box-shadow: var(--cms-shadow);
+  overflow: hidden;
+}
+
+.klinika-cms-card h2 {
+  margin: 0;
+  padding: 16px 22px;
+  border-bottom: 1px solid #F1F5F9;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--cms-ink);
+}
+
+.klinika-cms-body {
+  padding: 18px 22px;
+}
+
+.klinika-cms-body > .klinika-cms-muted:first-child {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.klinika-cms-body > .klinika-cms-table,
+.klinika-cms-body > table {
+  margin: 0 -22px;
+  width: calc(100% + 44px);
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+}
+
+.klinika-cms-body > .klinika-cms-table th:first-child,
+.klinika-cms-body > .klinika-cms-table td:first-child,
+.klinika-cms-body > table th:first-child,
+.klinika-cms-body > table td:first-child {
+  padding-left: 22px;
+}
+
+.klinika-cms-body > .klinika-cms-table th:last-child,
+.klinika-cms-body > .klinika-cms-table td:last-child,
+.klinika-cms-body > table th:last-child,
+.klinika-cms-body > table td:last-child {
+  padding-right: 22px;
+}
+
+.klinika-cms-card > .klinika-cms-actions {
+  margin: 0;
+  padding: 14px 22px 18px;
+  border-top: 1px solid #F1F5F9;
+  background: #FCFCFD;
+}
+
+/* Forms */
+.klinika-cms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 18px;
+  padding: 0;
+}
+
+.klinika-cms-grid > p {
+  margin: 0;
+}
+
+.klinika-cms-grid label {
+  display: block;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748B;
+  margin-bottom: 7px;
+}
+
+.klinika-cms-grid label strong {
+  font-weight: 700;
+  color: #64748B;
+}
+
+.klinika-cms-grid input,
+.klinika-cms-grid textarea,
+.klinika-cms-grid select {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 11px 13px;
+  border: 1px solid #D0D7E2 !important;
+  border-radius: 10px !important;
+  background: #fff;
+  color: var(--cms-ink);
+  font-family: Manrope, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  box-shadow: none !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.klinika-cms-grid input:hover,
+.klinika-cms-grid textarea:hover,
+.klinika-cms-grid select:hover {
+  border-color: #A8B5C7 !important;
+}
+
+.klinika-cms-grid input:focus,
+.klinika-cms-grid textarea:focus,
+.klinika-cms-grid select:focus {
+  border-color: var(--cms-blue) !important;
+  box-shadow: 0 0 0 4px rgba(0, 155, 227, 0.14) !important;
+  outline: none;
+  background: #FBFEFF;
+}
+
+.klinika-cms-grid textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* Actions */
+.klinika-cms-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.klinika-cms-actions .button,
+.klinika-cms-card .button {
+  border-radius: 10px !important;
+  padding: 0 16px !important;
+  min-height: 38px;
+  font-family: Manrope, "Segoe UI", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  line-height: 36px !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease !important;
+}
+
+.klinika-cms-actions .button-primary {
+  background: var(--cms-blue) !important;
+  border-color: var(--cms-blue) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(0, 155, 227, 0.25) !important;
+}
+
+.klinika-cms-actions .button-primary:hover {
+  background: var(--cms-blue-dark) !important;
+  border-color: var(--cms-blue-dark) !important;
+  transform: translateY(-1px);
+}
+
+.klinika-cms-actions .button:not(.button-primary) {
+  background: #fff !important;
+  border-color: #D0D7E2 !important;
+  color: #334155 !important;
+}
+
+.klinika-cms-actions .button:not(.button-primary):hover {
+  border-color: var(--cms-blue) !important;
+  color: var(--cms-blue) !important;
+  background: var(--cms-blue-soft) !important;
+}
+
+.klinika-cms-card .button-link-delete {
+  color: #DC2626 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 6px !important;
+  min-height: auto;
+  line-height: 1.4 !important;
+}
+
+.klinika-cms-card .button-small {
+  border-radius: 8px !important;
+  min-height: 30px;
+  line-height: 28px !important;
+  padding: 0 10px !important;
+  font-size: 12px !important;
+}
+
+/* Tables */
+.klinika-cms-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+.klinika-cms-table th,
+.klinika-cms-table td {
+  border-bottom: 1px solid #F1F5F9;
+  padding: 13px 18px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 13.5px;
+}
+
+.klinika-cms-table th {
+  background: #F8FAFC;
+  color: #64748B;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.klinika-cms-table tbody tr {
+  transition: background 0.12s ease;
+}
+
+.klinika-cms-table tbody tr:hover {
+  background: #F8FBFF;
+}
+
+.klinika-cms-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.klinika-cms-table code {
+  background: #F1F5F9;
+  color: #0F172A;
+  padding: 3px 7px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.klinika-cms-muted {
+  color: var(--cms-muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.klinika-cms-method {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+}
+
+.klinika-cms-method.get { background: #ECF9FF; color: #0077b3; }
+.klinika-cms-method.post { background: #E7F8ED; color: #048a22; }
+.klinika-cms-method.put { background: #FFF6E8; color: #B45309; }
+.klinika-cms-method.delete { background: #FEECEC; color: #B91C1C; }
+
+.klinika-cms-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 28px;
+  color: var(--cms-muted);
+  font-weight: 600;
+}
+
+.klinika-cms-loading::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid #CBD5E1;
+  border-top-color: var(--cms-blue);
+  border-radius: 50%;
+  animation: klinika-cms-spin 0.7s linear infinite;
+}
+
+@keyframes klinika-cms-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Translation pairs — RU source + EN translation */
+.klinika-i18n-form {
+  margin: 0;
+}
+
+.klinika-i18n-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 8px;
+}
+
+.klinika-i18n-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 0;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.klinika-i18n-pair:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.klinika-i18n-key {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  margin-bottom: 2px;
+}
+
+.klinika-i18n-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.klinika-i18n-field label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.klinika-i18n-field input[type="text"] {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid #333 !important;
+  border-radius: 0 !important;
+  background: #fff;
+  color: #1a1a1a;
+  font-family: Manrope, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  box-shadow: none !important;
+}
+
+.klinika-i18n-field input[readonly] {
+  background: #FAFAFA;
+  color: #333;
+  cursor: default;
+}
+
+.klinika-i18n-field input:not([readonly]):focus {
+  border-color: var(--cms-blue) !important;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 155, 227, 0.15) !important;
+}
+
+@media (max-width: 1100px) {
+  .klinika-cms-layout {
+    grid-template-columns: 210px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .klinika-cms-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .klinika-cms-nav {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .klinika-cms-nav-label {
+    width: 100%;
+    margin: 2px 4px 4px;
+  }
+
+  .klinika-cms-nav .button,
+  .klinika-cms-nav button[data-tab] {
+    width: auto !important;
+  }
+
+  .klinika-cms-grid {
+    grid-template-columns: 1fr;
+  }
+}

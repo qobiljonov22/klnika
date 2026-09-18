@@ -1,0 +1,26 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+
+# Secrets / local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+wp-config.php
+local-xdebuginfo.php
+
+# Dependencies / build
+node_modules/
+vendor/
+dist/
+*.map
+
+# WordPress / Local junk
+*.sql
+*.sql.gz
+uploads/
+cache/
