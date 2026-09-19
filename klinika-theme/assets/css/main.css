@@ -127,10 +127,7 @@ html {
     max-width: none;
 }
 
-/* Mobile nav — toggled via JS (.is-open) */
-.nav-list.is-open {
-    display: flex;
-}
+/* Mobile nav — toggled via JS (.is-open) + Tailwind on [data-nav-list] */
 
 /* Header booking button — Figma */
 .klinika-booking-btn {
@@ -316,19 +313,6 @@ html {
     padding: 0;
     font-family: Montserrat, sans-serif;
     color: #333;
-}
-
-.nav-list.is-open {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.25rem;
-    min-height: 73vh;
-    max-height: 73vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
-    padding: 8px 0 16px;
 }
 
 .nav-item {
@@ -738,14 +722,6 @@ a {
 
 body.is-nav-open {
     overflow: hidden;
-}
-
-.klinika-burger span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: #1a1a1a;
-    transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .klinika-burger.is-open span:nth-child(1) {

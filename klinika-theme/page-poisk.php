@@ -41,7 +41,7 @@ $total = count($results['doctors']) + count($results['services']) + count($resul
             <h1 class="<?php echo esc_attr(klinika_tw('page-title')); ?>">Поиск</h1>
             <form method="get" action="<?php echo esc_url(klinika_page_url('poisk')); ?>" class="flex flex-col sm:flex-row gap-3 mb-8">
                 <input type="search" name="q" value="<?php echo esc_attr($q); ?>" placeholder="Врач, услуга, анализ…" class="klinika-input flex-1" required>
-                <button type="submit" class="klinika-booking-btn shrink-0" data-cta="search">Найти</button>
+                <button type="submit" class="klinika-booking-btn !text-[#fff] shrink-0" data-cta="search">Найти</button>
             </form>
             <?php if ($q === '') : ?>
                 <p class="font-[Montserrat] text-[15px] text-[#5C5C5C]">Введите запрос по врачу, услуге или анализу.</p>

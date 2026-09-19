@@ -25,7 +25,7 @@ $status_map = [
             <p class="m-0 mb-5 font-[Montserrat] text-[14px] text-[#5C5C5C]">Введите телефон, указанный при онлайн-записи.</p>
             <form method="post" class="flex flex-col sm:flex-row gap-3 mb-8" data-my-bookings-form>
                 <input type="tel" name="phone" value="<?php echo esc_attr($phone); ?>" placeholder="+7 …" class="klinika-input flex-1" required data-my-bookings-phone>
-                <button type="submit" class="klinika-booking-btn shrink-0" data-cta="my_bookings">Показать</button>
+                <button type="submit" class="klinika-booking-btn !text-[#fff] shrink-0" data-cta="my_bookings">Показать</button>
             </form>
             <div data-my-bookings-list class="space-y-3">
                 <?php if ($phone !== '' && !$items) : ?>

@@ -29,7 +29,7 @@ $hero       = $args['klinika_info_hero'] ?? '';
                 <?php foreach (klinika_info_nav_items() as $slug => $label) :
                     $is = $slug === $active;
                     ?>
-                    <a href="<?php echo esc_url(klinika_page_url($slug)); ?>" class="px-3 py-1.5 text-[13px] font-[Montserrat] no-underline border <?php echo $is ? 'bg-[#009BE3] text-white border-[#009BE3]' : 'text-[#009BE3] border-[#7EC8E3] hover:bg-[#ECF9FF]'; ?>">
+                    <a href="<?php echo esc_url(klinika_page_url($slug)); ?>" class="px-3 py-1.5 text-[13px] font-[Montserrat] no-underline border <?php echo $is ? 'bg-[#009BE3] !text-[#fff] border-[#009BE3]' : 'text-[#009BE3] border-[#7EC8E3] hover:bg-[#ECF9FF]'; ?>">
                         <?php echo esc_html($label); ?>
                     </a>
                 <?php endforeach; ?>

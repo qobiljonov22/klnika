@@ -433,8 +433,8 @@ function klinika_tw($key, $extra = '')
         'page-title'     => 'm-0 mb-6 sm:mb-8 text-center text-[24px] sm:text-[32px] lg:text-[36px] font-[Montserrat] font-bold text-[#1a1a1a] leading-[1.15]',
         'page-title-left'=> 'm-0 mb-6 sm:mb-8 text-left text-[24px] sm:text-[32px] lg:text-[36px] font-[Montserrat] font-bold text-[#1a1a1a] leading-[1.15]',
         'section-title'  => 'm-0 mb-6 sm:mb-8 text-center text-[26px] sm:text-[32px] lg:text-[36px] font-[Montserrat] font-bold text-[#1a1a1a] leading-[1.15]',
-        'btn-green'      => 'inline-flex items-center justify-center px-8 py-3 min-w-[210px] bg-[#04AA29] hover:bg-[#039024] text-white font-[Montserrat] font-semibold text-[15px] no-underline transition-colors',
-        'btn-green-sm'   => 'inline-flex items-center justify-center px-6 py-2.5 bg-[#04AA29] hover:bg-[#039024] text-white font-[Montserrat] font-semibold text-[14px] no-underline transition-colors',
+        'btn-green'      => 'inline-flex items-center justify-center px-8 py-3 min-w-[210px] bg-[#04AA29] hover:bg-[#039024] !text-[#fff] font-[Montserrat] font-semibold text-[15px] no-underline transition-colors',
+        'btn-green-sm'   => 'inline-flex items-center justify-center px-6 py-2.5 bg-[#04AA29] hover:bg-[#039024] !text-[#fff] font-[Montserrat] font-semibold text-[14px] no-underline transition-colors',
         'muted'          => 'font-[Montserrat] text-[14px] sm:text-[15px] text-[#5C5C5C] leading-[1.7]',
     ];
     return trim(($map[$key] ?? '') . ' ' . $extra);
@@ -485,6 +485,16 @@ function klinika_get_doctor_profile($id)
 
 function klinika_booking_attrs_html($class = '', $doctor = '', $service = '')
 {
+    if ($class !== '' && strpos($class, '!text-[#fff]') === false) {
+        // Filled CTA only (not outline / hover:bg-…)
+        if (strpos($class, 'klinika-booking-btn') !== false
+            || strpos($class, 'btn-green') !== false
+            || preg_match('/(?:^|\s)bg-\[#04AA29\]/', $class)
+            || preg_match('/(?:^|\s)bg-\[#009BE3\]/', $class)
+        ) {
+            $class .= ' !text-[#fff]';
+        }
+    }
     $attrs = 'href="#callback" data-booking-open';
     if ($doctor !== '') {
         $attrs .= ' data-booking-doctor="' . esc_attr($doctor) . '"';

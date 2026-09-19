@@ -72,7 +72,7 @@ $booking_doctors  = klinika_doctor_cards(12);
                     <input type="hidden" name="doctor" value="" data-booking-doctor>
                 </div>
 
-                <button type="button" class="klinika-booking-btn w-full" data-booking-next="calendar"><?php klinika_e('book'); ?></button>
+                <button type="button" class="klinika-booking-btn !text-[#fff] w-full" data-booking-next="calendar"><?php klinika_e('book'); ?></button>
             </form>
         </div>
 
@@ -87,7 +87,7 @@ $booking_doctors  = klinika_doctor_cards(12);
                 <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
             </div>
             <div class="grid grid-cols-7 gap-1 mb-5" data-cal-grid></div>
-            <button type="button" class="klinika-booking-btn w-full disabled:opacity-40" data-booking-next="time" disabled>Далее</button>
+            <button type="button" class="klinika-booking-btn !text-[#fff] w-full disabled:opacity-40" data-booking-next="time" disabled>Далее</button>
             <button type="button" class="mt-2 w-full border-0 bg-transparent text-[#009BE3] font-[Montserrat] text-[14px] cursor-pointer" data-booking-back="form">Назад</button>
         </div>
 
@@ -99,7 +99,7 @@ $booking_doctors  = klinika_doctor_cards(12);
                     <button type="button" class="booking-time-slot is-available" data-time="<?php echo esc_attr($slot); ?>"><?php echo esc_html($slot); ?></button>
                 <?php endforeach; ?>
             </div>
-            <button type="button" class="klinika-booking-btn w-full disabled:opacity-40" data-booking-submit disabled>Записаться</button>
+            <button type="button" class="klinika-booking-btn !text-[#fff] w-full disabled:opacity-40" data-booking-submit disabled>Записаться</button>
             <button type="button" class="mt-2 w-full border-0 bg-transparent text-[#009BE3] font-[Montserrat] text-[14px] cursor-pointer" data-booking-back="calendar">Назад</button>
         </div>
 
@@ -108,7 +108,7 @@ $booking_doctors  = klinika_doctor_cards(12);
             <h2 class="m-0 mb-2 font-[Montserrat] font-bold text-[22px]">Заявка отправлена</h2>
             <p class="m-0 mb-6 font-[Montserrat] text-[14px] text-[#5C5C5C]">Мы свяжемся с вами для подтверждения (SMS/Telegram). Номер заявки можно проверить в «Мои записи».</p>
             <a href="<?php echo esc_url(klinika_page_url('moi-zapis')); ?>" class="inline-block mb-3 font-[Montserrat] text-[14px] text-[#009BE3] no-underline hover:underline">Мои записи</a>
-            <button type="button" class="klinika-booking-btn block mx-auto" data-booking-close>Закрыть</button>
+            <button type="button" class="klinika-booking-btn !text-[#fff] block mx-auto" data-booking-close>Закрыть</button>
         </div>
     </div>
 </div>

@@ -33,12 +33,12 @@ if (count($home_rows) < 4) {
 ?>
 <main class="bg-white" id="main-content">
 
-    <section class="relative overflow-visible bg-white pt-4 sm:pt-6 lg:pt-8 xl:pt-10 2xl:pt-12 3xl:pt-14 4xl:pt-16 pb-8 sm:pb-10 lg:pb-14">
+    <section class="relative overflow-visible bg-white pt-30 sm:pt-40  lg:pt-46 xl:pt-50 2xl:pt-46 3xl:pt-14 4xl:pt-16 pb-8 sm:pb-10 lg:pb-14">
         <div class="klinika-container">
-            <img src="<?php echo esc_url(klinika_img('sheep.png')); ?>" alt="" class="klinika-deco pointer-events-none absolute left-[-12px] sm:left-0 top-[42%] lg:top-[38%] z-[2] hidden md:block h-auto min-w-[56px] !max-w-[72px] md:min-w-[72px] md:!max-w-[96px] lg:min-w-[88px] lg:!max-w-[112px] xl:min-w-[104px] xl:!max-w-[128px] 2xl:min-w-[120px] 2xl:!max-w-[148px] 3xl:min-w-[136px] 3xl:!max-w-[168px]" aria-hidden="true">
+            <img src="<?php echo esc_url(klinika_img('sheep.png')); ?>" alt="" class="klinika-deco pointer-events-none md:ml-4 absolute left-[-12px] sm:left-0 top-[42%] lg:top-[38%] z-[2] hidden md:block h-auto min-w-[56px] !max-w-[72px] md:min-w-[72px] md:!max-w-[96px] lg:min-w-[88px] lg:!max-w-[112px] xl:min-w-[104px] xl:!max-w-[128px] 2xl:min-w-[120px] 2xl:!max-w-[148px] 3xl:min-w-[136px] 3xl:!max-w-[168px]" aria-hidden="true">
 
-            <div class="relative flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 xl:gap-14 2xl:gap-16 items-center max-w-[920px] xl:max-w-[1040px] 2xl:max-w-[1160px] 3xl:max-w-[1280px] mx-auto" data-hero-slider>
-                <img src="<?php echo esc_url(klinika_img('monkey.png')); ?>" alt="" class="klinika-deco pointer-events-none absolute left-[96%] top-[170px] z-[2] hidden md:block h-auto min-w-[188px] !max-w-none" aria-hidden="true">
+            <div class="relative flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 xl:gap-14 2xl:gap-16 items-center max-w-[920px] lg:max-w-[780px] xl:max-w-[1040px] 2xl:max-w-[1160px] 3xl:max-w-[1280px] mx-auto" data-hero-slider>
+                <img src="<?php echo esc_url(klinika_img('monkey.png')); ?>" alt="" class="klinika-deco pointer-events-none absolute right-0 lg:left-[96%] top-[170px] z-[2] hidden md:block h-auto w-[150px] lg:min-w-[188px] !max-w-none" aria-hidden="true">
 
                 <div class="relative mx-auto w-[90%] max-w-[328px] overflow-visible md:max-w-[420px] lg:max-w-none">
                     <img src="<?php echo esc_url(klinika_img('line-stroke.png') . '?v=' . KLINIKA_VERSION); ?>" alt="" class="pointer-events-none absolute left-1/2 top-1/2 z-[1] hidden max-lg:!block !h-[92px] !w-[calc(100%+72px)] !max-w-none -translate-x-1/2 -translate-y-1/2 rotate-[12deg] object-fill" aria-hidden="true">
@@ -63,7 +63,7 @@ if (count($home_rows) < 4) {
                                 <path d="M0.44 12.11a1.5 1.5 0 010-2.12L9.99.44a1.5 1.5 0 012.12 2.12L3.62 11.05l8.49 8.48a1.5 1.5 0 01-2.12 2.12L.44 12.11zM25.06 12.55H1.5v-3h23.56v3z" />
                             </svg>
                         </button>
-                        <a href="<?php echo esc_url(klinika_uslugi_url()); ?>" class="klinika-booking-btn flex-1"><?php klinika_e('learn_more'); ?></a>
+                        <a href="<?php echo esc_url(klinika_uslugi_url()); ?>" class="klinika-booking-btn !text-[#fff] flex-1"><?php klinika_e('learn_more'); ?></a>
                         <button type="button" class="klinika-hero-arrow shrink-0" data-hero-next aria-label="Next">
                             <svg class="w-4 h-4 rotate-180" viewBox="0 0 26 23" fill="currentColor" aria-hidden="true">
                                 <path d="M0.44 12.11a1.5 1.5 0 010-2.12L9.99.44a1.5 1.5 0 012.12 2.12L3.62 11.05l8.49 8.48a1.5 1.5 0 01-2.12 2.12L.44 12.11zM25.06 12.55H1.5v-3h23.56v3z" />
@@ -73,7 +73,7 @@ if (count($home_rows) < 4) {
 
                     <div class="hidden md:block relative">
                         <div class="flex items-center justify-between gap-4">
-                            <a href="<?php echo esc_url(klinika_uslugi_url()); ?>" class="klinika-booking-btn shrink-0"><?php klinika_e('learn_more'); ?></a>
+                            <a href="<?php echo esc_url(klinika_uslugi_url()); ?>" class="klinika-booking-btn !text-[#fff] shrink-0"><?php klinika_e('learn_more'); ?></a>
                             <img src="<?php echo esc_url(klinika_img('palm.png')); ?>" alt="" class="klinika-deco pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-0 w-12 lg:w-14 xl:w-16">
                             <div class="flex items-center gap-3 shrink-0">
                                 <button type="button" class="klinika-hero-arrow" data-hero-prev aria-label="Prev">
@@ -138,8 +138,8 @@ if (count($home_rows) < 4) {
                 ?>
                     <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 border-b border-[#04AA29] pb-3 sm:pb-4 sm:border-b-0 sm:grid sm:grid-cols-[1fr_auto_auto] sm:items-center sm:gap-3">
                         <p class="m-0 font-[Montserrat] font-medium text-[15px] sm:text-[16px] lg:text-[17px] text-center sm:text-left sm:border-b sm:border-[#04AA29] sm:pb-3"><?php echo esc_html($row['title']); ?></p>
-                        <a <?php echo klinika_booking_attrs_html('inline-flex items-center justify-center min-w-[180px] sm:min-w-[200px] px-4 py-2.5 rounded-full border border-[#04AA29] font-[Montserrat] text-[13px] sm:text-[14px] no-underline ' . ($filled ? 'bg-[#04AA29] text-white' : 'bg-white text-[#04AA29] hover:bg-[#04AA29] hover:text-white')); ?>><?php klinika_e('call_home'); ?></a>
-                        <a <?php echo klinika_booking_attrs_html('inline-flex items-center justify-center min-w-[180px] sm:min-w-[200px] px-4 py-2.5 rounded-full border border-[#04AA29] bg-white text-[#04AA29] font-[Montserrat] text-[13px] sm:text-[14px] no-underline hover:bg-[#04AA29] hover:text-white'); ?>><?php klinika_e('book'); ?></a>
+                        <a <?php echo klinika_booking_attrs_html('inline-flex items-center justify-center min-w-[180px] sm:min-w-[200px] px-4 py-2.5 rounded-full border border-[#04AA29] font-[Montserrat] text-[13px] sm:text-[14px] no-underline ' . ($filled ? 'bg-[#04AA29] !text-[#fff]' : 'bg-white text-[#04AA29] hover:bg-[#04AA29] hover:!text-[#fff]')); ?>><?php klinika_e('call_home'); ?></a>
+                        <a <?php echo klinika_booking_attrs_html('inline-flex items-center justify-center min-w-[180px] sm:min-w-[200px] px-4 py-2.5 rounded-full border border-[#04AA29] bg-white text-[#04AA29] font-[Montserrat] text-[13px] sm:text-[14px] no-underline hover:bg-[#04AA29] hover:!text-[#fff]'); ?>><?php klinika_e('book'); ?></a>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -178,7 +178,7 @@ if (count($home_rows) < 4) {
                         <blockquote class="m-0 min-w-0 max-w-[280px] sm:max-w-[320px] pl-4 border-l-2 border-[#1a1a1a] font-[Montserrat] font-medium text-[#1a1a1a] text-[14px] sm:text-[15px] md:text-[16px] leading-snug">
                             <?php echo esc_html($about_quote); ?>
                         </blockquote>
-                        <a href="<?php echo esc_url(klinika_page_url('o-klinike')); ?>" class="klinika-booking-btn shrink-0 self-start md:self-auto"><?php klinika_e('read_more_btn'); ?></a>
+                        <a href="<?php echo esc_url(klinika_page_url('o-klinike')); ?>" class="klinika-booking-btn !text-[#fff] shrink-0 self-start md:self-auto"><?php klinika_e('read_more_btn'); ?></a>
                     </div>
                 </div>
             </div>
@@ -200,13 +200,13 @@ if (count($home_rows) < 4) {
                 </div>
 
                 <div class="mt-5 sm:mt-6 flex items-center justify-between min-w-0 max-w-full sm:max-w-[360px] mx-auto px-1">
-                    <button type="button" class="inline-flex items-center justify-center min-w-[40px] max-w-[40px] h-10 rounded-full bg-[#009BE3] text-white border-0 cursor-pointer shrink-0" data-gallery-prev aria-label="Prev">
+                    <button type="button" class="inline-flex items-center justify-center min-w-[40px] max-w-[40px] h-10 rounded-full bg-[#009BE3] !text-[#fff] border-0 cursor-pointer shrink-0" data-gallery-prev aria-label="Prev">
                         <svg class="min-w-[14px] max-w-[14px] h-3.5" viewBox="0 0 26 23" fill="currentColor" aria-hidden="true">
                             <path d="M0.44 12.11a1.5 1.5 0 010-2.12L9.99.44a1.5 1.5 0 012.12 2.12L3.62 11.05l8.49 8.48a1.5 1.5 0 01-2.12 2.12L.44 12.11zM25.06 12.55H1.5v-3h23.56v3z" />
                         </svg>
                     </button>
                     <a href="<?php echo esc_url(klinika_page_url('galereya')); ?>" class="font-[Montserrat] font-medium text-[14px] sm:text-[15px] text-[#1a1a1a] underline underline-offset-2"><?php klinika_e('go'); ?> ›</a>
-                    <button type="button" class="inline-flex items-center justify-center min-w-[40px] max-w-[40px] h-10 rounded-full bg-[#009BE3] text-white border-0 cursor-pointer shrink-0" data-gallery-next aria-label="Next">
+                    <button type="button" class="inline-flex items-center justify-center min-w-[40px] max-w-[40px] h-10 rounded-full bg-[#009BE3] !text-[#fff] border-0 cursor-pointer shrink-0" data-gallery-next aria-label="Next">
                         <svg class="min-w-[14px] max-w-[14px] h-3.5 rotate-180" viewBox="0 0 26 23" fill="currentColor" aria-hidden="true">
                             <path d="M0.44 12.11a1.5 1.5 0 010-2.12L9.99.44a1.5 1.5 0 012.12 2.12L3.62 11.05l8.49 8.48a1.5 1.5 0 01-2.12 2.12L.44 12.11zM25.06 12.55H1.5v-3h23.56v3z" />
                         </svg>
@@ -257,7 +257,7 @@ if (count($home_rows) < 4) {
                             </p>
                             <p class="m-0 font-[Montserrat] text-[13px] sm:text-[14px] text-[#5C5C5C] leading-[1.55]"><?php echo esc_html(wp_trim_words($review['text'], 28, '...')); ?></p>
                         </div>
-                        <a href="<?php echo esc_url(klinika_page_url('otzyvy')); ?>" class="mt-3 sm:mt-0 sm:w-[160px] lg:w-[180px] inline-flex items-center justify-center bg-[#009BE3] !text-white font-[Montserrat] text-[14px] no-underline px-5 py-3 sm:py-0"><?php klinika_e('go'); ?> ›</a>
+                        <a href="<?php echo esc_url(klinika_page_url('otzyvy')); ?>" class="mt-3 sm:mt-0 sm:w-[160px] lg:w-[180px] inline-flex items-center justify-center bg-[#009BE3] !text-[#fff] font-[Montserrat] text-[14px] no-underline px-5 py-3 sm:py-0"><?php klinika_e('go'); ?> ›</a>
                     </article>
                 <?php endforeach; ?>
             </div>
@@ -277,7 +277,7 @@ if (count($home_rows) < 4) {
                     <label class="block font-[Montserrat] text-[13px] text-[#5C5C5C]"><?php klinika_e('your_data'); ?></label>
                     <input class="klinika-input" type="text" name="callback_name" placeholder="<?php echo esc_attr(klinika_t('name_placeholder')); ?>" required>
                     <input class="klinika-input" type="tel" name="callback_phone" placeholder="<?php echo esc_attr(klinika_t('phone_number')); ?>" required>
-                    <button type="submit" class="klinika-booking-btn w-full"><?php klinika_e('book'); ?></button>
+                    <button type="submit" class="klinika-booking-btn !text-[#fff] w-full"><?php klinika_e('book'); ?></button>
                 </form>
             </div>
         </div>
@@ -307,7 +307,7 @@ if (count($home_rows) < 4) {
         <div class="klinika-container">
             <h2 class="m-0 mb-6 sm:mb-8 text-center font-[Montserrat] font-bold text-[22px] sm:text-[26px] lg:text-[32px]"><?php klinika_e('our_partners'); ?></h2>
             <div class="flex items-center justify-center gap-3 sm:gap-6 lg:gap-10">
-                <button type="button" class="hidden sm:inline-block w-9 h-9 rounded-full bg-[#009BE3] text-white border-0 cursor-pointer justify-items-center" data-partners-prev>
+                <button type="button" class="hidden sm:inline-block w-9 h-9 rounded-full bg-[#009BE3] !text-[#fff] border-0 cursor-pointer justify-items-center" data-partners-prev>
                     <svg class="min-w-[14px] max-w-[14px] h-3.5" viewBox="0 0 26 23" fill="currentColor" aria-hidden="true">
                             <path d="M0.44 12.11a1.5 1.5 0 010-2.12L9.99.44a1.5 1.5 0 012.12 2.12L3.62 11.05l8.49 8.48a1.5 1.5 0 01-2.12 2.12L.44 12.11zM25.06 12.55H1.5v-3h23.56v3z" />
                         </svg>
@@ -317,7 +317,7 @@ if (count($home_rows) < 4) {
                         <img src="<?php echo esc_url($logo); ?>" alt="" class="h-10 sm:h-12 lg:h-14 w-auto max-w-[120px] object-contain">
                     <?php endforeach; ?>
                 </div>
-                <button type="button" class="hidden sm:inline-block w-9 h-9 rounded-full bg-[#009BE3] text-white border-0 cursor-pointer justify-items-center" data-partners-next>
+                <button type="button" class="hidden sm:inline-block w-9 h-9 rounded-full bg-[#009BE3] !text-[#fff] border-0 cursor-pointer justify-items-center" data-partners-next>
                     <svg class="min-w-[14px] max-w-[14px] h-3.5 rotate-180" viewBox="0 0 26 23" fill="currentColor" aria-hidden="true">
                             <path d="M0.44 12.11a1.5 1.5 0 010-2.12L9.99.44a1.5 1.5 0 012.12 2.12L3.62 11.05l8.49 8.48a1.5 1.5 0 01-2.12 2.12L.44 12.11zM25.06 12.55H1.5v-3h23.56v3z" />
                         </svg>

@@ -1,838 +1,823 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 /**
  * Breakpoints (Figma → devices)
  * sm 640 · md 768 · lg 1024 · xl 1280 · 2xl 1536 · 3xl 1800 · 4xl 2000
  */
 @theme {
-    --breakpoint-sm: 640px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 1024px;
-    --breakpoint-xl: 1280px;
-    --breakpoint-2xl: 1536px;
-    --breakpoint-3xl: 1800px;
-    --breakpoint-4xl: 2000px;
-    --color-brand: #FF7400;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1800px;
+  --breakpoint-4xl: 2000px;
+  --color-brand: #ff7400;
 }
 
 :root {
-    --klinika-container: 100%;
-    --klinika-gutter: 16px;
-    --klinika-header-offset: 112px;
-    --klinika-section-pb: 40px;
-    --klinika-footer-py: 36px;
-    --klinika-section-gap: 24px;
-    --klinika-prose: 100%;
+  --klinika-container: 100%;
+  --klinika-gutter: 16px;
+  --klinika-header-offset: 112px;
+  --klinika-section-pb: 40px;
+  --klinika-footer-py: 36px;
+  --klinika-section-gap: 24px;
+  --klinika-prose: 100%;
 }
 
 @media (min-width: 640px) {
-    :root {
-        --klinika-gutter: 20px;
-        --klinika-header-offset: 132px;
-        --klinika-section-pb: 48px;
-        --klinika-footer-py: 40px;
-        --klinika-section-gap: 28px;
-    }
+  :root {
+    --klinika-gutter: 20px;
+    --klinika-header-offset: 132px;
+    --klinika-section-pb: 48px;
+    --klinika-footer-py: 40px;
+    --klinika-section-gap: 28px;
+  }
 }
 
 @media (min-width: 768px) {
-    :root {
-        --klinika-gutter: 24px;
-        --klinika-header-offset: 148px;
-        --klinika-section-pb: 56px;
-        --klinika-footer-py: 44px;
-        --klinika-section-gap: 32px;
-        --klinika-prose: 720px;
-    }
+  :root {
+    --klinika-gutter: 24px;
+    --klinika-header-offset: 148px;
+    --klinika-section-pb: 56px;
+    --klinika-footer-py: 44px;
+    --klinika-section-gap: 32px;
+    --klinika-prose: 720px;
+  }
 }
 
 @media (min-width: 1024px) {
-    :root {
-        --klinika-container: 1024px;
-        --klinika-gutter: 32px;
-        --klinika-header-offset: 178px;
-        --klinika-section-pb: 64px;
-        --klinika-footer-py: 48px;
-        --klinika-section-gap: 40px;
-        --klinika-prose: 860px;
-    }
+  :root {
+    --klinika-container: 1024px;
+    --klinika-gutter: 32px;
+    --klinika-header-offset: 178px;
+    --klinika-section-pb: 64px;
+    --klinika-footer-py: 48px;
+    --klinika-section-gap: 40px;
+    --klinika-prose: 860px;
+  }
 }
 
 @media (min-width: 1280px) {
-    :root {
-        --klinika-container: 1200px;
-        --klinika-gutter: 40px;
-        --klinika-section-pb: 72px;
-        --klinika-footer-py: 56px;
-        --klinika-section-gap: 48px;
-        --klinika-prose: 980px;
-    }
+  :root {
+    --klinika-container: 1200px;
+    --klinika-gutter: 40px;
+    --klinika-section-pb: 72px;
+    --klinika-footer-py: 56px;
+    --klinika-section-gap: 48px;
+    --klinika-prose: 980px;
+  }
 }
 
 @media (min-width: 1536px) {
-    :root {
-        --klinika-container: 1360px;
-        --klinika-gutter: 48px;
-        --klinika-section-pb: 80px;
-        --klinika-footer-py: 60px;
-        --klinika-section-gap: 56px;
-        --klinika-prose: 1040px;
-    }
+  :root {
+    --klinika-container: 1360px;
+    --klinika-gutter: 48px;
+    --klinika-section-pb: 80px;
+    --klinika-footer-py: 60px;
+    --klinika-section-gap: 56px;
+    --klinika-prose: 1040px;
+  }
 }
 
 @media (min-width: 1800px) {
-    :root {
-        --klinika-container: 1520px;
-        --klinika-gutter: 56px;
-        --klinika-section-pb: 88px;
-        --klinika-footer-py: 64px;
-        --klinika-section-gap: 64px;
-        --klinika-prose: 1120px;
-    }
+  :root {
+    --klinika-container: 1520px;
+    --klinika-gutter: 56px;
+    --klinika-section-pb: 88px;
+    --klinika-footer-py: 64px;
+    --klinika-section-gap: 64px;
+    --klinika-prose: 1120px;
+  }
 }
 
 @media (min-width: 2000px) {
-    :root {
-        --klinika-container: 1680px;
-        --klinika-gutter: 64px;
-        --klinika-section-pb: 96px;
-        --klinika-footer-py: 72px;
-        --klinika-prose: 1200px;
-    }
+  :root {
+    --klinika-container: 1680px;
+    --klinika-gutter: 64px;
+    --klinika-section-pb: 96px;
+    --klinika-footer-py: 72px;
+    --klinika-prose: 1200px;
+  }
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: clip;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: clip;
 }
 
 html {
-    overflow-x: clip;
-    scroll-behavior: smooth;
+  overflow-x: clip;
+  scroll-behavior: smooth;
 }
 
 /* Shared container (used site-wide) */
 .klinika-container {
-    width: 100%;
-    max-width: var(--klinika-container);
-    margin-inline: auto;
-    padding-inline: var(--klinika-gutter);
-    box-sizing: border-box;
+  width: 100%;
+  max-width: var(--klinika-container);
+  margin-inline: auto;
+  padding-inline: var(--klinika-gutter);
+  box-sizing: border-box;
 }
 
 .hero img {
-    max-width: none;
+  max-width: none;
 }
 
-/* Mobile nav — toggled via JS (.is-open) */
-.nav-list.is-open {
-    display: flex;
-}
+/* Mobile nav — toggled via JS (.is-open) + Tailwind on [data-nav-list] */
 
 /* Header booking button — Figma */
 .klinika-booking-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #04AA29;
-    color: #fff !important;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.2;
-    padding: 12px 26px;
-    border-radius: 999px;
-    white-space: nowrap;
-    text-decoration: none !important;
-    transition: background-color 0.2s ease;
-    border: 0;
-    cursor: pointer;
-    box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #04aa29;
+  color: #fff !important;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+  padding: 12px 26px;
+  border-radius: 999px;
+  white-space: nowrap;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease;
+  border: 0;
+  cursor: pointer;
+  box-shadow: none;
 }
 .klinika-booking-btn:hover,
 .klinika-booking-btn:focus {
-    background: #039024;
-    color: #fff !important;
+  background: #039024;
+  color: #fff !important;
 }
 .klinika-booking-btn--mobile {
-    display: inline-flex;
-    width: auto;
-    margin-top: 8px;
-    font-size: 14px;
-    padding: 10px 20px;
+  display: inline-flex;
+  width: auto;
+  margin-top: 8px;
+  font-size: 14px;
+  padding: 10px 20px;
 }
 
 @media (min-width: 1280px) {
-    .klinika-booking-btn {
-        font-size: 16px;
-        padding: 13px 28px;
-    }
+  .klinika-booking-btn {
+    font-size: 16px;
+    padding: 13px 28px;
+  }
 }
 
 @media (min-width: 1536px) {
-    .klinika-booking-btn {
-        font-size: 17px;
-        padding: 14px 32px;
-    }
+  .klinika-booking-btn {
+    font-size: 17px;
+    padding: 14px 32px;
+  }
 }
 
 /* Language switcher — flag + native language name */
 .klinika-lang {
-    position: relative;
-    flex-shrink: 0;
-    font-family: Montserrat, sans-serif;
+  position: relative;
+  flex-shrink: 0;
+  font-family: Montserrat, sans-serif;
 }
 
 .klinika-lang-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #fff;
-    border: 1px solid #D8ECF7;
-    border-radius: 999px;
-    padding: 7px 12px;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    color: #333;
-    cursor: pointer;
-    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #d8ecf7;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #333;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .klinika-lang-toggle:hover,
 .klinika-lang-toggle:focus-visible,
 .klinika-lang-toggle[aria-expanded="true"] {
-    border-color: #009BE3;
-    background: #ECF9FF;
-    color: #009BE3;
+  border-color: #009be3;
+  background: #ecf9ff;
+  color: #009be3;
 }
 
 .klinika-lang-flag {
-    display: block;
-    width: 22px;
-    height: 15px;
-    flex-shrink: 0;
-    border-radius: 2px;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+  display: block;
+  width: 22px;
+  height: 15px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 .klinika-lang-chevron {
-    flex-shrink: 0;
-    transition: transform 0.2s ease;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
 .klinika-lang-toggle[aria-expanded="true"] .klinika-lang-chevron {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .klinika-lang-name {
-    display: none;
-    white-space: nowrap;
+  display: none;
+  white-space: nowrap;
 }
 
 .klinika-lang-short {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .klinika-lang-menu {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 0;
-    z-index: 60;
-    min-width: 172px;
-    margin: 0;
-    padding: 6px;
-    list-style: none;
-    background: #fff;
-    border: 1px solid #E3EFF7;
-    border-radius: 12px;
-    box-shadow: 0 12px 32px rgba(16, 42, 66, 0.16);
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 60;
+  min-width: 172px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #e3eff7;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(16, 42, 66, 0.16);
 }
 
 .klinika-lang-menu[hidden] {
-    display: none;
+  display: none;
 }
 
 .klinika-lang-option {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 9px 12px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.2;
-    color: #333;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background-color 0.15s ease, color 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
 }
 
 .klinika-lang-option:hover,
 .klinika-lang-option:focus-visible {
-    background: #ECF9FF;
-    color: #009BE3;
+  background: #ecf9ff;
+  color: #009be3;
 }
 
 .klinika-lang-option.is-active {
-    background: #009BE3;
-    color: #fff;
-    font-weight: 600;
+  background: #009be3;
+  color: #fff;
+  font-weight: 600;
 }
 
 @media (min-width: 640px) {
-    .klinika-lang-name {
-        display: inline;
-    }
+  .klinika-lang-name {
+    display: inline;
+  }
 
-    .klinika-lang-short {
-        display: none;
-    }
+  .klinika-lang-short {
+    display: none;
+  }
 }
 
 .klinika-header-top {
-    min-height: 72px;
+  min-height: 72px;
 }
 
 @media (min-width: 1024px) {
-    .klinika-header-top {
-        min-height: 88px;
-    }
+  .klinika-header-top {
+    min-height: 88px;
+  }
 }
 
 /* Nav bar — Figma one-to-one */
 .klinika-nav {
-    background: #ECF9FF;
+  background: #ecf9ff;
 }
 
 .nav-list {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-family: Montserrat, sans-serif;
-    color: #333;
-}
-
-.nav-list.is-open {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.25rem;
-    min-height: 73vh;
-    max-height: 73vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
-    padding: 8px 0 16px;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  color: #333;
 }
 
 .nav-item {
-    position: relative;
-    border-bottom: 1px solid rgba(0, 155, 227, 0.15);
-    padding: 14px 0;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 155, 227, 0.15);
+  padding: 14px 0;
 }
 
 .nav-item--booking {
-    border-bottom: 0;
-    padding-top: 16px;
+  border-bottom: 0;
+  padding-top: 16px;
 }
 
 .nav-trigger,
 .nav-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.25;
-    color: #333;
-    text-decoration: none;
-    background: none;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #333;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .nav-chevron {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
-    margin: 0;
-    background: transparent;
-    border: 0;
-    color: #333;
-    cursor: pointer;
-    line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  color: #333;
+  cursor: pointer;
+  line-height: 0;
 }
 
 .nav-chevron svg {
-    display: block;
-    transition: transform 0.25s ease;
+  display: block;
+  transition: transform 0.25s ease;
 }
 
 .nav-sublink {
-    display: block;
-    padding: 10px 12px;
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    color: #333;
-    text-decoration: none;
+  display: block;
+  padding: 10px 12px;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  color: #333;
+  text-decoration: none;
 }
 
 .nav-sublink:hover,
 .nav-subitem.is-current .nav-sublink {
-    color: #009BE3;
+  color: #009be3;
 }
 
 .nav-dropdown {
-    list-style: none;
-    margin: 8px 0 0;
-    padding: 6px 0;
-    background: #fff;
-    border-radius: 8px;
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 6px 0;
+  background: #fff;
+  border-radius: 8px;
 }
 
 .nav-dropdown.hidden {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 1023px) {
-    body.is-nav-open .klinika-nav .klinika-container {
-        min-height: auto;
-    }
+  body.is-nav-open .klinika-nav .klinika-container {
+    min-height: auto;
+  }
 
-    .nav-list .nav-dropdown:not(.hidden) {
-        display: block;
-        position: static;
-        box-shadow: none;
-        max-height: none;
-        overflow: visible;
-        width: 100%;
-        margin-top: 8px;
-    }
+  .nav-list .nav-dropdown:not(.hidden) {
+    display: block;
+    position: static;
+    box-shadow: none;
+    max-height: none;
+    overflow: visible;
+    width: 100%;
+    margin-top: 8px;
+  }
 
-    .nav-item.is-current > .nav-trigger,
-    .nav-item.is-current > .nav-trigger .nav-link,
-    .nav-trigger.is-active,
-    .nav-trigger.is-active .nav-link {
-        color: #009BE3;
-    }
+  .nav-item.is-current > .nav-trigger,
+  .nav-item.is-current > .nav-trigger .nav-link,
+  .nav-trigger.is-active,
+  .nav-trigger.is-active .nav-link {
+    color: #009be3;
+  }
 }
 
 @media (min-width: 1024px) {
-    .klinika-nav {
-        margin-top: 0;
-    }
+  .klinika-nav {
+    margin-top: 0;
+  }
 
-    .nav-list {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        min-height: 52px;
-        padding: 0;
-        font-size: 15px;
-        gap: 8px;
-    }
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 52px;
+    padding: 0;
+    font-size: 15px;
+    gap: 8px;
+  }
 
-    .nav-item {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        border-bottom: 0;
-        padding: 0;
-        flex: 0 0 auto;
-    }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-bottom: 0;
+    padding: 0;
+    flex: 0 0 auto;
+  }
 
-    .nav-trigger,
-    .nav-link {
-        position: relative;
-        font-size: 15px;
-        line-height: 1.2;
-        padding: 16px 0 14px;
-        color: #333;
-    }
+  .nav-trigger,
+  .nav-link {
+    position: relative;
+    font-size: 15px;
+    line-height: 1.2;
+    padding: 16px 0 14px;
+    color: #333;
+  }
 
-    .nav-item.has-children > .nav-trigger {
-        padding: 0;
-        gap: 6px;
-    }
+  .nav-item.has-children > .nav-trigger {
+    padding: 0;
+    gap: 6px;
+  }
 
-    .nav-item.has-children > .nav-trigger > .nav-link {
-        padding: 16px 0 14px;
-    }
+  .nav-item.has-children > .nav-trigger > .nav-link {
+    padding: 16px 0 14px;
+  }
 
-    /* Figma: blue underline under label; text stays #333 */
-    .nav-trigger::after,
-    a.nav-link.nav-trigger::after,
-    .nav-item.has-children > .nav-trigger > .nav-link::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 10px;
-        height: 2px;
-        background: transparent;
-        border-radius: 1px;
-        transition: background-color 0.2s ease;
-        pointer-events: none;
-    }
+  /* Figma: blue underline under label; text stays #333 */
+  .nav-trigger::after,
+  a.nav-link.nav-trigger::after,
+  .nav-item.has-children > .nav-trigger > .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    height: 2px;
+    background: transparent;
+    border-radius: 1px;
+    transition: background-color 0.2s ease;
+    pointer-events: none;
+  }
 
-    .nav-item.has-children > .nav-trigger::after {
-        content: none;
-    }
+  .nav-item.has-children > .nav-trigger::after {
+    content: none;
+  }
 
-    .nav-trigger:hover::after,
-    .nav-trigger.is-active::after,
-    .nav-item.is-current > a.nav-trigger::after,
-    .nav-item.has-children > .nav-trigger:hover > .nav-link::after,
-    .nav-item.has-children.is-current > .nav-trigger > .nav-link::after,
-    .nav-item.has-children > .nav-trigger.is-active > .nav-link::after {
-        background: #009BE3;
-    }
+  .nav-trigger:hover::after,
+  .nav-trigger.is-active::after,
+  .nav-item.is-current > a.nav-trigger::after,
+  .nav-item.has-children > .nav-trigger:hover > .nav-link::after,
+  .nav-item.has-children.is-current > .nav-trigger > .nav-link::after,
+  .nav-item.has-children > .nav-trigger.is-active > .nav-link::after {
+    background: #009be3;
+  }
 
-    .nav-trigger:hover,
-    .nav-trigger:hover .nav-link,
-    .nav-trigger.is-active,
-    .nav-trigger.is-active .nav-link,
-    .nav-item.is-current > .nav-trigger,
-    .nav-item.is-current > .nav-trigger .nav-link {
-        color: #333;
-    }
+  .nav-trigger:hover,
+  .nav-trigger:hover .nav-link,
+  .nav-trigger.is-active,
+  .nav-trigger.is-active .nav-link,
+  .nav-item.is-current > .nav-trigger,
+  .nav-item.is-current > .nav-trigger .nav-link {
+    color: #333;
+  }
 
-    .nav-chevron[aria-expanded="true"] svg,
-    [data-dropdown-icon].rotate-180 {
-        transform: rotate(180deg);
-    }
+  .nav-chevron[aria-expanded="true"] svg,
+  [data-dropdown-icon].rotate-180 {
+    transform: rotate(180deg);
+  }
 
-    .nav-dropdown {
-        position: absolute;
-        left: 0;
-        top: 100%;
-        margin-top: 0;
-        min-width: 220px;
-        padding: 8px 0;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        border-radius: 6px;
-        z-index: 30;
-    }
+  .nav-dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 0;
+    min-width: 220px;
+    padding: 8px 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    z-index: 30;
+  }
 
-    .nav-sublink {
-        padding: 10px 16px;
-        white-space: nowrap;
-    }
+  .nav-sublink {
+    padding: 10px 16px;
+    white-space: nowrap;
+  }
 }
 
 @media (min-width: 1280px) {
-    .nav-list {
-        font-size: 16px;
-        min-height: 56px;
-    }
-    .nav-trigger,
-    .nav-link,
-    .nav-item.has-children > .nav-trigger > .nav-link {
-        font-size: 16px;
-        padding: 18px 0 16px;
-    }
-    .nav-trigger::after,
-    a.nav-link.nav-trigger::after,
-    .nav-item.has-children > .nav-trigger > .nav-link::after {
-        bottom: 12px;
-    }
+  .nav-list {
+    font-size: 16px;
+    min-height: 56px;
+  }
+  .nav-trigger,
+  .nav-link,
+  .nav-item.has-children > .nav-trigger > .nav-link {
+    font-size: 16px;
+    padding: 18px 0 16px;
+  }
+  .nav-trigger::after,
+  a.nav-link.nav-trigger::after,
+  .nav-item.has-children > .nav-trigger > .nav-link::after {
+    bottom: 12px;
+  }
 }
 
 @media (min-width: 1536px) {
-    .nav-list {
-        font-size: 18px;
-        min-height: 60px;
-    }
-    .nav-trigger,
-    .nav-link {
-        font-size: 18px;
-    }
+  .nav-list {
+    font-size: 18px;
+    min-height: 60px;
+  }
+  .nav-trigger,
+  .nav-link {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1920px) {
-    .nav-list {
-        font-size: 20px;
-        min-height: 64px;
-    }
-    .nav-trigger,
-    .nav-link {
-        font-size: 20px;
-    }
+  .nav-list {
+    font-size: 20px;
+    min-height: 64px;
+  }
+  .nav-trigger,
+  .nav-link {
+    font-size: 20px;
+  }
 }
 
 /* Footer — Figma pattern tile (footer.png) on #F7F7F7 */
 .klinika-footer {
-    background-color: #f7f7f7;
-    background-image: var(--klinika-footer-bg, url('../images/footer.png'));
-    background-repeat: repeat;
-    background-position: left top;
-    background-size: auto;
+  background-color: #f7f7f7;
+  background-image: var(--klinika-footer-bg, url("../images/footer.png"));
+  background-repeat: repeat;
+  background-position: left top;
+  background-size: auto;
 }
 
 /* Booking modal — Figma */
 [data-booking-root].is-open {
-    display: flex;
+  display: flex;
 }
 
 [data-booking-dialog].is-calendar {
-    box-shadow: 0 0 32px rgba(0, 173, 239, 0.35), 0 8px 40px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 0 32px rgba(0, 173, 239, 0.35),
+    0 8px 40px rgba(0, 0, 0, 0.08);
 }
 
 [data-booking-dialog] {
-    max-height: calc(100dvh - 2rem);
-    overflow-x: hidden;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
+  max-height: calc(100dvh - 2rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 [data-booking-root] .booking-select-menu {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    z-index: 20;
-    width: 100%;
-    max-height: min(240px, 42vh);
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow-x: hidden;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
-    border: 1px solid #c8c8c8;
-    border-top: 0;
-    border-radius: 0 0 6px 6px;
-    background: #fff;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    scrollbar-width: thin;
-    scrollbar-color: #c8c8c8 transparent;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 20;
+  width: 100%;
+  max-height: min(240px, 42vh);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #c8c8c8;
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  scrollbar-width: thin;
+  scrollbar-color: #c8c8c8 transparent;
 }
 
 [data-booking-root] .booking-select-menu::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
 
 [data-booking-root] .booking-select-menu::-webkit-scrollbar-thumb {
-    background-color: #c8c8c8;
-    border-radius: 9999px;
+  background-color: #c8c8c8;
+  border-radius: 9999px;
 }
 
 [data-booking-root] [data-booking-dropdown].is-open .booking-select-btn {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 [data-booking-root] [data-booking-dropdown].is-open .booking-select-chevron {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 [data-booking-root] .booking-select-menu button {
-    display: block;
-    width: 100%;
-    text-align: left;
-    border: 0;
-    background: transparent;
-    padding: 0.625rem 0.875rem;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    line-height: 1.35;
-    color: #1a1a1a;
-    cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  padding: 0.625rem 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+  color: #1a1a1a;
+  cursor: pointer;
 }
 
 [data-booking-root] .booking-select-menu button:hover,
 [data-booking-root] .booking-select-menu button.is-active {
-    background-color: #f0f9f4;
+  background-color: #f0f9f4;
 }
 
 [data-booking-root] .booking-time-slot {
-    height: 40px;
-    border-radius: 8px;
-    border: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.15s, color 0.15s;
+  height: 40px;
+  border-radius: 8px;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
 }
 
 [data-booking-root] .booking-time-slot.is-disabled {
-    background-color: #f0f0f0;
-    color: #1a1a1a;
-    cursor: default;
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+  cursor: default;
 }
 
 [data-booking-root] .booking-time-slot.is-available {
-    background-color: #009be3;
-    color: #fff;
+  background-color: #009be3;
+  color: #fff;
 }
 
 [data-booking-root] .booking-time-slot.is-available:hover {
-    background-color: #0088c9;
+  background-color: #0088c9;
 }
 
 [data-booking-root] .booking-time-slot.is-selected {
-    background-color: #009be3;
-    color: #fff;
+  background-color: #009be3;
+  color: #fff;
 }
 
 [data-booking-root] .booking-cal-day {
-    display: flex;
-    height: 36px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    border: 0;
-    border-radius: 9999px;
-    background: transparent;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    cursor: pointer;
+  display: flex;
+  height: 36px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 9999px;
+  background: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 [data-booking-root] .booking-cal-day.is-past {
-    color: #1a1a1a;
-    cursor: default;
+  color: #1a1a1a;
+  cursor: default;
 }
 
 [data-booking-root] .booking-cal-day.is-available {
-    color: #00adef;
+  color: #00adef;
 }
 
 [data-booking-root] .booking-cal-day.is-selected {
-    background-color: #009be3;
-    color: #fff;
+  background-color: #009be3;
+  color: #fff;
 }
 
 /* Base resets */
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
 
 .klinika-callback {
-    background-color: #e7f5fc;
-    background-image: url('../images/pattern-kd.png');
-    background-repeat: repeat;
-    background-position: center;
+  background-color: #e7f5fc;
+  background-image: url("../images/pattern-kd.png");
+  background-repeat: repeat;
+  background-position: center;
 }
 
 .klinika-deco {
-    mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
 }
 
 body.is-nav-open {
-    overflow: hidden;
-}
-
-.klinika-burger span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: #1a1a1a;
-    transition: transform 0.25s ease, opacity 0.25s ease;
+  overflow: hidden;
 }
 
 .klinika-burger.is-open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 
 .klinika-burger.is-open span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .klinika-burger.is-open span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .klinika-input {
-    width: 100%;
-    border: 1px solid #d7d7d7;
-    background: #fff;
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    padding: 14px 16px;
-    outline: none;
-    box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  padding: 14px 16px;
+  outline: none;
+  box-sizing: border-box;
 }
 
 .klinika-input:focus {
-    border-color: #009be3;
+  border-color: #009be3;
 }
 
 .klinika-table-row {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 16px;
-    align-items: center;
-    padding: 14px 0;
-    border-bottom: 1px solid #d8eef7;
-    font-family: Montserrat, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #d8eef7;
+  font-family: Montserrat, sans-serif;
 }
 
 .klinika-modal {
-    position: fixed;
-    inset: 0;
-    z-index: 80;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.45);
-    padding: 16px;
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 16px;
 }
 
 .klinika-modal.is-open {
-    display: flex;
+  display: flex;
 }
 
 .klinika-map iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .klinika-booking-btn.w-full {
-    width: 100%;
+  width: 100%;
 }
 
 .klinika-hero-arrow {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border: 0;
-    border-radius: 999px;
-    background: #009be3;
-    color: #fff;
-    cursor: pointer;
-    padding: 0;
-    flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: #009be3;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 .klinika-hero-arrow:hover,
 .klinika-hero-arrow:focus {
-    background: #0088c9;
+  background: #0088c9;
 }
 
 @media (min-width: 1280px) {
-    .klinika-hero-arrow {
-        width: 48px;
-        height: 48px;
-    }
+  .klinika-hero-arrow {
+    width: 48px;
+    height: 48px;
+  }
 }

@@ -292,34 +292,15 @@ function klinika_register_feature_rest()
 }
 add_action('rest_api_init', 'klinika_register_feature_rest');
 
-/** Front chrome: sticky + cookie + a11y */
+/** Front chrome: cookie + a11y (sticky contacts → header.php) */
 function klinika_render_client_chrome()
 {
-    $wa = klinika_whatsapp_url();
-    $tg = klinika_telegram_url();
     $cookie = klinika_option('klinika_cookie_text', 'Мы используем cookie для удобства сайта. Продолжая, вы соглашаетесь с политикой конфиденциальности.');
     ?>
-    <div class="fixed right-3 bottom-24 z-[70] flex flex-col gap-2.5 lg:hidden" data-sticky-contacts>
-        <a href="tel:<?php echo esc_attr(klinika_phone_href()); ?>" data-cta="sticky_call" class="inline-flex items-center gap-2 min-h-[48px] rounded-full bg-[#04AA29] !text-white shadow-[0_8px_24px_rgba(4,170,41,0.35)] no-underline font-[Montserrat] text-[12px] font-semibold pl-3.5 pr-4" aria-label="Позвонить">
-            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2z"/></svg>
-            Позвонить
-        </a>
-        <?php if ($wa) : ?>
-            <a href="<?php echo esc_url($wa); ?>" target="_blank" rel="noopener" data-cta="sticky_whatsapp" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#25D366] !text-white shadow-[0_8px_24px_rgba(37,211,102,0.35)] no-underline" aria-label="WhatsApp">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 004.1 17.5L3 21l3.6-1A11 11 0 0020.5 3.5zm-8.5 17a9 9 0 01-4.6-1.3l-.3-.2-2.7.7.7-2.6-.2-.3A9 9 0 1112 20.5zm5-6.7c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 01-2.2-1.4 8.2 8.2 0 01-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3s-1 1-1 2.4 1 2.8 1.2 3 .2.3 2 3.1 2.6 2.4 3.1 2.6a7 7 0 002.1.6c.3 0 .9 0 1.2-.2s1.6-1.1 1.8-2.1.2-.8.1-.9-.2-.2-.5-.3z"/></svg>
-            </a>
-        <?php endif; ?>
-        <?php if ($tg) : ?>
-            <a href="<?php echo esc_url($tg); ?>" target="_blank" rel="noopener" data-cta="sticky_telegram" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#2AABEE] !text-white shadow-[0_8px_24px_rgba(42,171,238,0.35)] no-underline" aria-label="Telegram">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.04 15.3l-.37 5.2c.53 0 .76-.23 1.04-.5l2.5-2.4 5.18 3.8c.95.52 1.63.25 1.89-.88l3.42-16.06h.01c.3-1.41-.51-1.96-1.44-1.62L2.3 9.7C.93 10.23.95 11 2.12 11.34l4.6 1.44L17.4 6.2c.54-.36 1.03-.16.63.2"/></svg>
-            </a>
-        <?php endif; ?>
-    </div>
-
     <div class="fixed left-3 bottom-3 z-[70] hidden sm:flex flex-col gap-1 bg-white/95 border border-[#E8F4FB] rounded-lg p-1.5 shadow-md" data-a11y-toolbar>
-        <button type="button" class="border-0 bg-[#ECF9FF] text-[#009BE3] font-[Montserrat] text-[12px] px-2.5 py-1.5 cursor-pointer rounded hover:bg-[#009BE3] hover:text-white transition-colors" data-a11y-font="up" title="Крупнее">A+</button>
-        <button type="button" class="border-0 bg-[#ECF9FF] text-[#009BE3] font-[Montserrat] text-[12px] px-2.5 py-1.5 cursor-pointer rounded hover:bg-[#009BE3] hover:text-white transition-colors" data-a11y-font="down" title="Мельче">A−</button>
-        <button type="button" class="border-0 bg-[#1a1a1a] text-white font-[Montserrat] text-[12px] px-2.5 py-1.5 cursor-pointer rounded" data-a11y-contrast title="Контраст">◐</button>
+        <button type="button" class="border-0 bg-[#ECF9FF] text-[#009BE3] font-[Montserrat] text-[12px] px-2.5 py-1.5 cursor-pointer rounded hover:bg-[#009BE3] hover:!text-[#fff] transition-colors" data-a11y-font="up" title="Крупнее">A+</button>
+        <button type="button" class="border-0 bg-[#ECF9FF] text-[#009BE3] font-[Montserrat] text-[12px] px-2.5 py-1.5 cursor-pointer rounded hover:bg-[#009BE3] hover:!text-[#fff] transition-colors" data-a11y-font="down" title="Мельче">A−</button>
+        <button type="button" class="border-0 bg-[#1a1a1a] !text-[#fff] font-[Montserrat] text-[12px] px-2.5 py-1.5 cursor-pointer rounded" data-a11y-contrast title="Контраст">◐</button>
     </div>
 
     <div class="fixed inset-x-0 bottom-0 z-[80] hidden bg-[#1a1a1a]/95 backdrop-blur-sm text-white px-4 py-3.5 sm:px-6" data-cookie-banner>
@@ -327,7 +308,7 @@ function klinika_render_client_chrome()
             <p class="m-0 flex-1 font-[Montserrat] text-[13px] sm:text-[14px] leading-snug"><?php echo esc_html($cookie); ?>
                 <a href="<?php echo esc_url(klinika_page_url('privacy-policy')); ?>" class="underline !text-white ml-1">Подробнее</a>
             </p>
-            <button type="button" class="klinika-booking-btn shrink-0 !px-5 !py-2 !text-[14px]" data-cookie-accept>Принять</button>
+            <button type="button" class="klinika-booking-btn shrink-0 !px-5 !py-2 !text-[14px] !text-[#fff]" data-cookie-accept>Принять</button>
         </div>
     </div>
     <?php

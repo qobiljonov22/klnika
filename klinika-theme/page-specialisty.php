@@ -62,7 +62,7 @@ $wp_doctors = klinika_get_doctors();
                             <h2 class="m-0 mb-1 font-[Montserrat] font-semibold text-[16px]"><?php echo esc_html($doctor['name']); ?></h2>
                             <p class="m-0 text-[14px] text-[#5C5C5C]"><?php echo esc_html($doctor['position']); ?></p>
                             <p class="m-0 mb-3 text-[13px] text-[#9A9A9A]"><?php echo esc_html($doctor['experience'] . ' ' . klinika_t('experience')); ?><?php echo $home === '1' ? ' · на дому' : ''; ?></p>
-                            <a href="<?php echo esc_url($doctor['url']); ?>" class="<?php echo esc_attr(klinika_tw('btn-green-sm', 'w-full')); ?>"><?php klinika_e('more'); ?></a>
+                            <a href="<?php echo esc_url($doctor['url']); ?>" class="<?php echo esc_attr(klinika_tw('btn-green-sm', 'w-full !text-[#fff]')); ?>"><?php klinika_e('more'); ?></a>
                         </div>
                     </article>
                 <?php endforeach; ?>

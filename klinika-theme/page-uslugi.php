@@ -54,7 +54,7 @@ $active_title = $current['title'] ?? klinika_t('services');
                                 $is_active = $current && $current['slug'] === $service['slug'];
                                 ?>
                                 <li class="<?php echo $i > 0 ? 'border-t border-[#E8E8E8]' : ''; ?>">
-                                    <a href="<?php echo esc_url($service['url']); ?>" class="block px-5 py-3.5 text-[15px] no-underline transition-colors <?php echo $is_active ? 'bg-[#009BE3] text-white font-medium' : 'text-[#5C5C5C] hover:bg-[#ECF9FF] hover:text-[#009BE3]'; ?>">
+                                    <a href="<?php echo esc_url($service['url']); ?>" class="block px-5 py-3.5 text-[15px] no-underline transition-colors <?php echo $is_active ? 'bg-[#009BE3] !text-[#fff] font-medium' : 'text-[#5C5C5C] hover:bg-[#ECF9FF] hover:text-[#009BE3]'; ?>">
                                         <?php echo esc_html($service['title']); ?>
                                     </a>
                                 </li>
